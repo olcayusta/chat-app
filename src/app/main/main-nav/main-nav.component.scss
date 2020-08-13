@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  border-right: 1px solid rgba(0, 0, 0, .12);
+}
+
+.new-chat-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 32px;
+}

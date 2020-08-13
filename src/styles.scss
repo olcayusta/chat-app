@@ -1,0 +1,128 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$chat-app-primary: mat-palette($mat-deep-purple);
+$chat-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$chat-app-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$chat-app-theme: mat-light-theme((
+  color: (
+    primary: $chat-app-primary,
+    accent: $chat-app-accent,
+    warn: $chat-app-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($chat-app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+mat-toolbar {
+  /*position: fixed;
+  top: 0;*/
+  background-color: #fff !important;
+  // box-shadow: 0 1px 4px 1px rgba(0, 0, 0, .12) !important;
+  z-index: 4;
+  color: black !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+
+  span {
+    font-weight: 700;
+  }
+}
+
+.mat-subheader {
+  /* font-size: 24px !important;
+   font-weight: 700 !important;*/
+  color: black !important;
+  font-weight: 650 !important;
+  font-size: 1.2rem !important;
+}
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Inter, sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include angular-material-typography($custom-typography);
+
+/**
+ * Like, basically PERFECT scrollbars
+ */
+
+/*
+   It's pure CSS.
+   Since a quick google search will confirm people going crazy about Mac OS Lion scrollbars...
+   this has no fade-out effect.
+
+   In Mac OS Lion, the lowest common denominator is always showing scrollbars by a setting.
+   So, this fits that lowest common denominator.
+   Facebook, lifehacker, and Google have all basically taken this approach. Of course Google uses incredibly ugly square scrollbars, but so be it.
+   Also, in regards to the fade in/out effect, this may just be one reason why soo many people outraged (and still hide) the ticker.
+   Ending note: I recommend this for non-lion users. As a lion user, I prefer my fading out scrollbars. If you sniff a UA of mac os lion, don't add this css.
+*/
+
+
+/* Turn on custom 8px wide scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* 1px wider than Lion. */
+  /* This is more usable for users trying to click it. */
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 100px;
+}
+
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
+  /* This is the EXACT color of Mac OS scrollbars.
+     Yes, I pulled out digital color meter */
+  background: rgba(0, 0, 0, 0.36);
+  -webkit-border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0, 0, 0, 0.61); /* Some darker color when you click it */
+  -webkit-border-radius: 100px;
+}
+
+mat-toolbar span {
+  letter-spacing: -1px;
+}

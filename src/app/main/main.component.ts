@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Message} from '../message.model';
 import {FormControl} from '@angular/forms';
 import {SocketService} from '../socket.service';
+import { ChatService } from '../chat.service';
 
 @Component({
   selector: 'app-main',
@@ -13,11 +14,15 @@ export class MainComponent implements OnInit {
   msgControl = new FormControl();
 
   constructor(
-    private socketService: SocketService
+    private socketService: SocketService,
+    private chatService: ChatService
   ) {
   }
 
   ngOnInit(): void {
+    this.chatService.getMessages().subscribe(value => {
+      this.messages = value;
+    });
   }
 
   send($event: any): void {

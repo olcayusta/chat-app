@@ -40,8 +40,7 @@ html, body {
 
 body {
   margin: 0;
-  // font-family: Roboto, "Helvetica Neue", sans-serif;
-  font-family: 'Inter', sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   overflow: hidden;
 }
 
@@ -58,27 +57,13 @@ mat-toolbar {
   color: black !important;
   box-shadow: none !important;
   border-bottom: 1px solid rgba(0, 0, 0, .12);
-
-  span {
-    font-weight: 700;
-  }
 }
 
 .mat-subheader {
-  /* font-size: 24px !important;
-   font-weight: 700 !important;*/
-  color: black !important;
-  font-weight: 650 !important;
-  font-size: 1.2rem !important;
+  // font-weight: 500;
+  // font-size: 1.2rem !important;
+  text-transform: uppercase;
 }
-
-$custom-typography: mat-typography-config(
-  $font-family: 'Inter, sans-serif',
-  $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
-);
-
-@include angular-material-typography($custom-typography);
 
 /**
  * Like, basically PERFECT scrollbars
@@ -121,8 +106,4 @@ $custom-typography: mat-typography-config(
 ::-webkit-scrollbar-thumb:vertical:active {
   background: rgba(0, 0, 0, 0.61); /* Some darker color when you click it */
   -webkit-border-radius: 100px;
-}
-
-mat-toolbar span {
-  letter-spacing: -1px;
 }

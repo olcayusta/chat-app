@@ -6,105 +6,21 @@
     <div class="conversation-container">
 
       <mat-toolbar color="primary" class="mat-elevation-z4">
-        <span>Chat App</span>
+        <span class="room-title">PWA</span>
+        <span class="flex-spacer"></span>
+        <button mat-icon-button>
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>info</mat-icon>
+        </button>
       </mat-toolbar>
-
-      <app-messages-list></app-messages-list>
 
         <div class="chat-right">
           <div class="chat-messages">
 
-            <div class="chat-msg">
-              <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_molly_oshea_256x256.png"></app-msg-avatar>
-              <div class="chat-post">Hello from sidenav</div>
-              <div class="chat-msg-username">Olcay Usta</div>
-            </div>
+            <app-messages-list></app-messages-list>
 
-            <div class="chat-msg">
-              <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_molly_oshea_256x256.png"></app-msg-avatar>
-              <div class="chat-post">Hello from sidenav</div>
-              <div class="chat-msg-username">Olcay Usta</div>
-            </div>
-
-            <div class="chat-msg">
-              <app-msg-avatar avatar="https://a.rsg.sc/s/GTAVCAnniversary/n/GTAVC42.png"></app-msg-avatar>
-              <div class="flex-cl">
-                <div class="chat-post">It's cool</div>
-                <div class="chat-msg-username">Olcay Usta</div>
-              </div>
-            </div>
-
-            <div class="chat-msg">
-              <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_abigail_roberts_256x256.png"></app-msg-avatar>
-              <div class="flex-cl">
-                <div class="chat-post">Yeah, I fuck you</div>
-                <div class="chat-msg-username">Abigail Roberts</div>
-              </div>
-            </div>
-
-            <div class="chat-msg">
-              <div class="chat-post">Bla lba...</div>
-            </div>
-            <div class="chat-msg">
-              <div class="chat-post">Herşey daha güzel olacak</div>
-            </div>
-            <div class="chat-msg">
-              <div class="chat-post">Tabii, ne demezsin</div>
-            </div>
-
-            <div class="chat-msg">
-              <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/RedDeadRedemption235.png"></app-msg-avatar>
-              <div class="flex-cl">
-                <div class="chat-post">Daha da iyi oluyor</div>
-                <div class="chat-msg-username">Olcay Usta</div>
-              </div>
-            </div>
-
-            <div class="chat-msg">
-              <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_sadie_adler_256x256.png"></app-msg-avatar>
-              <div class="flex-cl">
-                <div class="chat-post">Angular 11 ile gücü hisset.</div>
-                <div class="chat-msg-username">Olcay Usta</div>
-              </div>
-            </div>
-
-            <div class="chat-msg">
-              <div class="img-back">
-                <img class="chat-msg-avatar" src="https://a.rsg.sc/s/RDR2/n/RedDeadRedemption237.png">
-              </div>
-              <div class="flex-cl">
-                <div class="chat-post">React 10</div>
-                <div class="chat-msg-username">Olcay Usta</div>
-              </div>
-            </div>
-            <div class="chat-msg">
-              <div class="img-back">
-                <img class="chat-msg-avatar" src=" https://a.rsg.sc/s/RDR2/n/RedDeadRedemption232.png">
-              </div>
-              <div class="flex-cl">
-                <div class="chat-post">The cagey adult can't extend the math.</div>
-                <div class="chat-msg-username">Olcay Usta</div>
-              </div>
-            </div>
-            <div class="chat-msg">
-              <div class="img-back">
-                <img class="chat-msg-avatar" src="https://a.rsg.sc/s/RDR2/n/rdr2_dutch_van_der_linde_256x256.png">
-              </div>
-              <div class="flex-cl">
-                <div class="chat-post">The labored cost can't extend the stress.</div>
-                <div class="chat-msg-username">Olcay Usta</div>
-              </div>
-            </div>
-
-            <div class="chat-msg" *ngFor="let msg of messages">
-              <div class="img-back">
-                <img class="chat-msg-avatar" src="{{msg.user.picture}}">
-              </div>
-              <div class="flex-cl">
-                <div class="chat-post">{{msg.content}}</div>
-                <div class="chat-msg-username">{{msg.user.displayName}}</div>
-              </div>
-            </div>
           </div>
           <div class="chat-form">
         <textarea [formControl]="msgControl" placeholder="Type a message..." cdkTextareaAutosize

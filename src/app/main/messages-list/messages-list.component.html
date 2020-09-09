@@ -1,1 +1,95 @@
+<div class="chat-msg">
+  <app-msg-avatar avatar="https://i.pinimg.com/236x/84/29/41/8429419ea9eea5d1cdd05be0905cceff.jpg"></app-msg-avatar>
+  <div class="flex-cl">
+    <div class="chat-post">Hello from sidenav</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
 
+<div class="chat-msg">
+  <app-msg-avatar avatar="https://i.pinimg.com/236x/84/29/41/8429419ea9eea5d1cdd05be0905cceff.jpg"></app-msg-avatar>
+  <div class="flex-cl">
+    <div class="chat-post">Hello from sidenav</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
+
+<div class="chat-msg">
+  <app-msg-avatar avatar="https://i.pinimg.com/236x/a2/f3/1c/a2f31caae3ce766a935afd9045272e95.jpg"></app-msg-avatar>
+  <div class="flex-cl">
+    <div class="chat-post">It's cool</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
+
+<div class="chat-msg">
+  <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_abigail_roberts_256x256.png"></app-msg-avatar>
+  <div class="flex-cl">
+    <div class="chat-post">Yeah, I fuck you</div>
+    <div class="chat-msg-username">Abigail Roberts</div>
+  </div>
+</div>
+
+<div class="chat-msg">
+  <div class="chat-post">Bla lba...</div>
+</div>
+<div class="chat-msg">
+  <div class="chat-post">Herşey daha güzel olacak</div>
+</div>
+<div class="chat-msg">
+  <div class="chat-post">Tabii, ne demezsin</div>
+</div>
+
+<div class="chat-msg">
+  <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/RedDeadRedemption235.png"></app-msg-avatar>
+  <div class="flex-cl">
+    <div class="chat-post">Daha da iyi oluyor</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
+
+<div class="chat-msg">
+  <app-msg-avatar avatar="https://a.rsg.sc/s/RDR2/n/rdr2_sadie_adler_256x256.png"></app-msg-avatar>
+  <div class="flex-cl">
+    <div class="chat-post">Angular 11 ile gücü hisset.</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
+
+<div class="chat-msg">
+  <div class="img-back">
+    <img class="chat-msg-avatar" src="https://a.rsg.sc/s/RDR2/n/RedDeadRedemption237.png">
+  </div>
+  <div class="flex-cl">
+    <div class="chat-post">React 10</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
+<div class="chat-msg">
+  <div class="img-back">
+    <img class="chat-msg-avatar" src=" https://a.rsg.sc/s/RDR2/n/RedDeadRedemption232.png">
+  </div>
+  <div class="flex-cl">
+    <div class="chat-post">The cagey adult can't extend the math.</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
+<div class="chat-msg">
+  <div class="img-back">
+    <img class="chat-msg-avatar" src="https://a.rsg.sc/s/RDR2/n/rdr2_dutch_van_der_linde_256x256.png">
+  </div>
+  <div class="flex-cl">
+    <div class="chat-post">The labored cost can't extend the stress.</div>
+    <div class="chat-msg-username">Olcay Usta</div>
+  </div>
+</div>
+
+<div class="chat-msg" *ngFor="let msg of messages">
+  <div class="img-back">
+    <img class="chat-msg-avatar" src="{{msg.user.picture}}">
+  </div>
+  <div class="flex-cl">
+    <div class="chat-post">{{msg.content}}</div>
+    <div class="chat-msg-username">{{msg.user.displayName}}</div>
+  </div>
+</div>

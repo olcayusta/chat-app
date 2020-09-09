@@ -5,7 +5,7 @@ import {webSocket} from 'rxjs/webSocket';
   providedIn: 'root'
 })
 export class SocketService {
-  subject = webSocket('ws://localhost:9001');
+  subject = webSocket('ws://localhost:1234');
 
   constructor() {
   }

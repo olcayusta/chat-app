@@ -20,8 +20,14 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.chatService.getMessages().subscribe(value => {
+/*    this.chatService.getMessages().subscribe(value => {
       this.messages = value;
+    });*/
+
+    this.socketService.subject.subscribe(value => {
+      // this.messages.push(value);
+      const audio = new Audio('//localhost:4200/assets/hero_decorative-celebration-02.ogg');
+      audio.play();
     });
   }
 

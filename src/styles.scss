@@ -40,7 +40,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Archivo, Roboto, "Helvetica Neue", sans-serif;
   overflow: hidden;
 }
 
@@ -106,4 +106,8 @@ mat-toolbar {
 ::-webkit-scrollbar-thumb:vertical:active {
   background: rgba(0, 0, 0, 0.61); /* Some darker color when you click it */
   -webkit-border-radius: 100px;
+}
+
+.flex-spacer {
+  flex: 1 0 auto;
 }

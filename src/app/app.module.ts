@@ -17,6 +17,8 @@ import { MsgAvatarComponent } from './msg-avatar/msg-avatar.component';
 import { MessagesListComponent } from './main/messages-list/messages-list.component';
 import { MessageWrapperComponent } from './main/message-wrapper/message-wrapper.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,8 @@ import { MatIconModule } from '@angular/material/icon';
     ReactiveFormsModule,
     HttpClientModule,
     MatSidenavModule,
-    MatIconModule
+    MatIconModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

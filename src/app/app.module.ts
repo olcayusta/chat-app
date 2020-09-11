@@ -19,6 +19,7 @@ import { MessageWrapperComponent } from './main/message-wrapper/message-wrapper.
 import { MatIconModule } from '@angular/material/icon';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MsgFormComponent } from './msg-form/msg-form.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { environment } from '../environments/environment';
     MainNavComponent,
     MsgAvatarComponent,
     MessagesListComponent,
-    MessageWrapperComponent
+    MessageWrapperComponent,
+    MsgFormComponent
   ],
   imports: [
     BrowserModule,

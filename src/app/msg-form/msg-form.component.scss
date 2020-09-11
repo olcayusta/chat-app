@@ -1,0 +1,21 @@
+:host {
+  order: 2;
+}
+
+.chat-form {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, .12);
+  padding-left: 16px;
+}
+
+textarea {
+  outline: 0;
+  background: transparent;
+  border: 0;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0;
+  margin: 20px 0;
+  width: 100%;
+  font-family: inherit;
+}

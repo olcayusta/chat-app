@@ -5,8 +5,8 @@
   height: 100%;
   overflow: hidden;
   position: relative;
-  background-color: #fff;
-  border-right: 1px solid rgba(0, 0, 0, .12);
+  border-right: 1px solid var(--divider-color);
+  background-color: var(--drawer-background);
 }
 
 .new-chat-header {

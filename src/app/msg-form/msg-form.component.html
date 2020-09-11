@@ -1,0 +1,4 @@
+<div class="chat-form">
+        <textarea aria-label="Reply form" [formControl]="msgControl" placeholder="Type a message..." cdkTextareaAutosize
+                  [cdkAutosizeMinRows]="1" [cdkAutosizeMaxRows]="8" (keydown.enter)="send($event)"></textarea>
+</div>

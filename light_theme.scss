@@ -1,12 +1,12 @@
 @import '~@angular/material/theming';
 
 :root {
-  --background-color: #121212;
-  --toolbar-background: #272727;
-  --primary-color: #fff;
-  --drawer-background: #121212;
-  --divider-color: rgba(255, 255, 255, 0.12);
-  --medium-emphasis-color: rgba(255, 255, 255, 0.6);
+  --background-color: #fff;
+  --toolbar-background: #fff;
+  --primary-color: #000;
+  --drawer-background: #fff;
+  --divider-color: rgba(0, 0, 0, 0.12);
+  --medium-emphasis-color: rgba(0, 0, 0, .6);
 }
 
 $chat-app-primary: mat-palette($mat-deep-purple);
@@ -14,7 +14,7 @@ $chat-app-accent: mat-palette($mat-pink, A200, A100, A400);
 
 $chat-app-warn: mat-palette($mat-red);
 
-$chat-app-theme: mat-dark-theme((
+$chat-app-theme: mat-light-theme((
   color: (
     primary: $chat-app-primary,
     accent: $chat-app-accent,
@@ -24,19 +24,8 @@ $chat-app-theme: mat-dark-theme((
 
 @include angular-material-theme($chat-app-theme);
 
-.chat-post {
-  display: inline-flex;
-  font-size: 14px;
-  line-height: 20px;
-  background-color: #1e1e1e !important;
-  padding: 10px 12px;
-  border-radius: 24px;
-  margin-left: 8px;
-}
-
-.primary {
-  background-color: rgba(187, 134, 252, 0.12) !important;
-  color: #fff !important;
+mat-icon {
+  color: rgba(0, 0, 0, .6);
 }
 
 /* width */
@@ -46,12 +35,12 @@ $chat-app-theme: mat-dark-theme((
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #121212;
+  background: #fff;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ffffff12;
+  background: rgba(0, 0, 0, 0.36);
   border-radius: 24px;
 }
 

@@ -7,6 +7,7 @@
   position: relative;
   border-right: 1px solid var(--divider-color);
   background-color: var(--drawer-background);
+  z-index: 9;
 }
 
 .new-chat-header {
@@ -18,10 +19,9 @@
 
 h1 {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 32px;
   flex: 1;
-  font-family: Archivo, sans-serif;
 }
 
 sup {
@@ -46,5 +46,4 @@ sup {
   object-fit: cover;
   background-color: #6200ee;
   color: #fff;
-  display: none;
 }

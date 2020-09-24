@@ -4,7 +4,7 @@
 
 .chat-form {
   display: flex;
-  border-top: 1px solid rgba(0, 0, 0, .12);
+  border-top: 1px solid var(--divider-color);
   padding-left: 16px;
 }
 
@@ -18,4 +18,5 @@ textarea {
   margin: 20px 0;
   width: 100%;
   font-family: inherit;
+  color: var(--primary-color);
 }

@@ -1,43 +1,47 @@
 <div class="main-nav-header">
   <div class="new-chat-header">
     <h1>
-      <span>Chat</span>
+      <span>Sohbetler</span>
+      <sup>beta 1</sup>
     </h1>
-    <button mat-icon-button>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
     </button>
   </div>
 </div>
- <!-- <mat-nav-list>
-    <h3 mat-subheader>Kişiler</h3>
-    <a mat-list-item>
-      <img mat-list-avatar src="https://a.rsg.sc/s/RDR2/n/RedDeadRedemption229.png">
-      <h3 mat-line>Abigail Roberts</h3>
-    </a>
-    <a mat-list-item>
-      <img mat-list-avatar src="https://a.rsg.sc/s/RDR2/n/rdr2_abigail_roberts_256x256.png">
-      <h3 mat-line>Arthur Morgan</h3>
-    </a>
-    <a mat-list-item>
-      <img mat-list-avatar src="https://a.rsg.sc/s/RDR2/n/rdr2_tilly_jackson_256x256.png">
-      <h3 mat-line>Karen Jones</h3>
-    </a>
-  </mat-nav-list>-->
-  <mat-nav-list>
-    <div mat-subheader>Odalar</div>
-    <a mat-list-item>
-      <span class="room-avatar" mat-list-avatar>G</span>
-      <div mat-line>Genel konular</div>
-      <div mat-line>You: Hello friends!</div>
-    </a>
-    <a mat-list-item>
-      <span class="room-avatar" mat-list-avatar>T</span>
-      <div mat-line>Oda 2</div>
-      <div mat-line>Last mssg</div>
-    </a>
-    <a mat-list-item>
-      <span class="room-avatar" mat-list-avatar>T</span>
-      <div mat-line>Oda 2</div>
-      <div mat-line>xddd</div>
-    </a>
-  </mat-nav-list>
+<mat-menu #menu="matMenu" xPosition="before">
+  <button mat-menu-item>Test 1</button>
+</mat-menu>
+<!-- <mat-nav-list>
+   <h3 mat-subheader>Kişiler</h3>
+   <a mat-list-item>
+     <img mat-list-avatar src="https://a.rsg.sc/s/RDR2/n/RedDeadRedemption229.png">
+     <h3 mat-line>Abigail Roberts</h3>
+   </a>
+   <a mat-list-item>
+     <img mat-list-avatar src="https://a.rsg.sc/s/RDR2/n/rdr2_abigail_roberts_256x256.png">
+     <h3 mat-line>Arthur Morgan</h3>
+   </a>
+   <a mat-list-item>
+     <img mat-list-avatar src="https://a.rsg.sc/s/RDR2/n/rdr2_tilly_jackson_256x256.png">
+     <h3 mat-line>Karen Jones</h3>
+   </a>
+ </mat-nav-list>-->
+<mat-nav-list>
+  <div mat-subheader>Odalar</div>
+  <a mat-list-item>
+    <span class="room-avatar" mat-list-avatar>G</span>
+    <div mat-line>Genel konular</div>
+    <div mat-line>You: Hello friends!</div>
+  </a>
+  <a mat-list-item>
+    <span class="room-avatar" mat-list-avatar>T</span>
+    <div mat-line>Oda 2</div>
+    <div mat-line>Last mssg</div>
+  </a>
+  <a mat-list-item>
+    <span class="room-avatar" mat-list-avatar>T</span>
+    <div mat-line>Oda 2</div>
+    <div mat-line>xddd</div>
+  </a>
+</mat-nav-list>

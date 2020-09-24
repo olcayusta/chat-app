@@ -1,6 +1,15 @@
-@import "dark_theme";
-
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+@media (prefers-color-scheme: light) {
+  @import "light_theme";
+}
+
+@media (prefers-color-scheme: dark) {
+  @import "dark_theme";
+}
 
 html, body {
   height: 100%;
@@ -16,25 +25,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --background-color: #fff;
-  --toolbar-background: #fff;
-  --primary-color: #000;
-  --drawer-background: #fff;
-  --divider-color: rgba(0, 0, 0, 0.12);
-  --medium-emphasis-color: rgba(0, 0, 0, .6);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background-color: #fff;
-    --toolbar-background: #fff;
-    --primary-color: #000;
-    --drawer-background: #fff;
-    --divider-color: rgba(0, 0, 0, 0.12);
-  }
 }
 
 mat-toolbar {
@@ -73,31 +63,31 @@ mat-toolbar {
 */
 
 
-/* Turn on custom 8px wide scrollbar */
+/*!* Turn on custom 8px wide scrollbar *!
 ::-webkit-scrollbar {
-  width: 8px; /* 1px wider than Lion. */
-  /* This is more usable for users trying to click it. */
+  width: 8px; !* 1px wider than Lion. *!
+  !* This is more usable for users trying to click it. *!
   background-color: rgba(0, 0, 0, 0);
   -webkit-border-radius: 100px;
 }
 
-/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+!* hover effect for both scrollbar area, and scrollbar 'thumb' *!
 ::-webkit-scrollbar:hover {
   background-color: rgba(0, 0, 0, 0.09);
 }
 
-/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+!* The scrollbar 'thumb' ...that marque oval shape in a scrollbar *!
 ::-webkit-scrollbar-thumb:vertical {
-  /* This is the EXACT color of Mac OS scrollbars.
-     Yes, I pulled out digital color meter */
+  !* This is the EXACT color of Mac OS scrollbars.
+     Yes, I pulled out digital color meter *!
   background: rgba(0, 0, 0, 0.36);
   -webkit-border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:vertical:active {
-  background: rgba(0, 0, 0, 0.61); /* Some darker color when you click it */
+  background: rgba(0, 0, 0, 0.61); !* Some darker color when you click it *!
   -webkit-border-radius: 100px;
-}
+}*/
 
 .flex-spacer {
   flex: 1 0 auto;

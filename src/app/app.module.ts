@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MsgFormComponent } from './msg-form/msg-form.component';
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MsgFormComponent } from './msg-form/msg-form.component';
     HttpClientModule,
     MatSidenavModule,
     MatIconModule,
+    MatMenuModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],

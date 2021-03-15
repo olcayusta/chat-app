@@ -8,12 +8,6 @@ import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [LoginComponent],
-  imports: [
-    CommonModule,
-    LoginRoutingModule,
-    MatInputModule,
-    MatButtonModule
-  ]
+  imports: [CommonModule, LoginRoutingModule, MatInputModule, MatButtonModule],
 })
-export class LoginModule {
-}
+export class LoginModule {}

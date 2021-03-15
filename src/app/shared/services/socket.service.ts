@@ -8,19 +8,19 @@ interface SubjectData {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SocketService {
   subject: WebSocketSubject<SubjectData> = webSocket('ws://localhost:1234');
+
   // subject: WebSocketSubject<SubjectData> = webSocket('ws://localhost/wsapp/');
 
-  constructor() {
-  }
+  constructor() {}
 
   // get message by event name
-  on(event: string): Observable<{ event: string, payload: object }> {
-    return new Observable(subscriber => {
-      this.subject.subscribe(value => {
+  on(event: string): Observable<{ event: string; payload: object }> {
+    return new Observable((subscriber) => {
+      this.subject.subscribe((value) => {
         if (value.event === event) {
           subscriber.next(value);
         }
@@ -34,8 +34,8 @@ export class SocketService {
     this.subject.next({
       event: 'message',
       payload: {
-        content: message
-      }
+        content: message,
+      },
     });
   }
 }

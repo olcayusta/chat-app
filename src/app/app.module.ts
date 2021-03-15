@@ -13,14 +13,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MainNavComponent } from './main/main-nav/main-nav.component';
-import { MsgAvatarComponent } from './msg-avatar/msg-avatar.component';
+import { MsgAvatarComponent } from './main/components/msg-avatar/msg-avatar.component';
 import { MessagesListComponent } from './main/messages-list/messages-list.component';
 import { MessageWrapperComponent } from './main/message-wrapper/message-wrapper.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { MsgFormComponent } from './msg-form/msg-form.component';
-import {MatMenuModule} from "@angular/material/menu";
+import { MsgFormComponent } from './main/components/msg-form/msg-form.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import {MatMenuModule} from "@angular/material/menu";
     MsgAvatarComponent,
     MessagesListComponent,
     MessageWrapperComponent,
-    MsgFormComponent
+    MsgFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,10 +45,11 @@ import {MatMenuModule} from "@angular/material/menu";
     MatSidenavModule,
     MatIconModule,
     MatMenuModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}
